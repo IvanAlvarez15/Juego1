@@ -1,3 +1,6 @@
+# Juego1.py
+# Ivan Alvarez y Jesus Daniel
+# Tortuga que colorea figuras
 from turtle import *
 from freegames import vector
 
