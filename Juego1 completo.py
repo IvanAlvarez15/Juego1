@@ -1,3 +1,6 @@
+# Juego1.py
+# Ivan Alvarez y Jesus Daniel
+# Tortuga que colorea figuras
 from turtle import *
 from freegames import vector
 
@@ -29,7 +32,7 @@ def circle(start, end): #Circulo
 
     "Draw circle from start to end."
     for count in range(360):
-        forward(end.x - start.x)
+        forward((end.x - start.x)/2)
         left(1)
 
     end_fill()
@@ -91,6 +94,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('Orange'), 'O')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
