@@ -1,4 +1,4 @@
-# Juego1.py
+# Juego1 completo.py
 # Ivan Alvarez y Jesus Daniel
 # Tortuga que colorea figuras
 from turtle import *
