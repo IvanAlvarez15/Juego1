@@ -1,14 +1,14 @@
 from turtle import *
 from freegames import vector
 
-def line(start, end):
+def line(start, end): # Hacer una linea
     "Draw line from start to end."
     up()
     goto(start.x, start.y)
     down()
     goto(end.x, end.y)
 
-def square(start, end):
+def square(start, end): #Cuadrado
     "Draw square from start to end."
     up()
     goto(start.x, start.y)
@@ -21,16 +21,48 @@ def square(start, end):
 
     end_fill()
 
-def circle(start, end):
+def circle(start, end): #Circulo
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
     "Draw circle from start to end."
+    for count in range(360):
+        forward(end.x - start.x)
+        left(1)
+
+    end_fill()
     pass  # TODO
 
-def rectangle(start, end):
+def rectangle(start, end): #Rectangulo 
     "Draw rectangle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward(end.x - start.x)
+        left(90)
+        forward((end.x - start.x)*2)
+        left(90)
+
+    end_fill()
     pass  # TODO
 
-def triangle(start, end):
+def triangle(start, end): # Triangulo
     "Draw triangle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+
+    end_fill()
     pass  # TODO
 
 def tap(x, y):
