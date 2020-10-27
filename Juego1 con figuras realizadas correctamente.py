@@ -32,7 +32,7 @@ def circle(start, end): #Circulo
 
     "Draw circle from start to end."
     for count in range(360):
-        forward((end.x - start.x)/2)
+        forward((end.x - start.x)/2) # Divide la distancia recorrida entre 2
         left(1)
 
     end_fill()
@@ -48,7 +48,7 @@ def rectangle(start, end): #Rectangulo
     for count in range(2):
         forward(end.x - start.x)
         left(90)
-        forward((end.x - start.x)*2)
+        forward((end.x - start.x)*2)# duplica la distancia recorrida originalmente
         left(90)
 
     end_fill()
