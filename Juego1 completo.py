@@ -1,4 +1,4 @@
-# Juego1 completo.py
+# Juego1.py
 # Ivan Alvarez y Jesus Daniel
 # Tortuga que colorea figuras
 from turtle import *
@@ -24,17 +24,14 @@ def square(start, end): #Cuadrado
 
     end_fill()
 
-def circle(start, end): #Circulo
+def drawcircle(start, end): #Circulo
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
 
     "Draw circle from start to end."
-    for count in range(360):
-        forward((end.x - start.x)/2)
-        left(1)
-
+    circle(end.x - start.x)
     end_fill()
     pass  # TODO
 
@@ -94,10 +91,10 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
-onkey(lambda: color('Orange'), 'O')
+onkey(lambda: color('orange'), 'O')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', drawcircle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
